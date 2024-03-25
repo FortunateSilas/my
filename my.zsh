@@ -16,22 +16,10 @@ function my() {
     . ${MY_SETTINGS}
 
 
-    ##############################
-
-    # init
-    . ${MY_INIT}
-
-    if [ -d "${MY_HOST}" ]; then
-        echo "Host folder found"
-        echo "${MY_HOST}"
-    else
-        echo "Host folder not found"
-        echo "${MY_HOST}"
-    fi
-
 
     ##############################
 
-
+    # run
+    . ${MY_CONFIGS}/run.zsh
 
 }
