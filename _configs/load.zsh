@@ -1,10 +1,7 @@
-# runner
-# program dirs
-local MY_THINGS="${MY_HOME}/Things"
-local MY_TEMPLATES="${MY_HOME}/templates"
-
+# Load
 
 # parameters
+###################################
 
 # Thing
 local THING="${1}"
@@ -19,10 +16,12 @@ local DO="${2}"
 
 if [ ! ${2} ]; then
 
+    # Configure Things
     . ${MY_THINGS}/${(C)THING}.zsh
 
 else
 
-    . ${MY_THINGS}/${THING}/${DO}.zsh
+    # Do Things
+    . ${MY_THINGS}/Thing/Do.zsh
 
 fi

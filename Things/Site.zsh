@@ -1,4 +1,4 @@
-# Load Host
+# Load Site
 if [ ! ${2} ]; then
 
     # Show Thing Options

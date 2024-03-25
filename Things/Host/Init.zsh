@@ -1,1 +1,0 @@
-echo "Host init"

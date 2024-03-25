@@ -1,0 +1,1 @@
+echo "${DO} ${USER_INPUT} ${THING}."

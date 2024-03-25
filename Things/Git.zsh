@@ -1,4 +1,4 @@
-# Load Host
+# Load Git
 if [ ! ${2} ]; then
 
     # Show Thing Options

@@ -15,11 +15,9 @@ function my() {
     # get settings
     . ${MY_SETTINGS}
 
-
-
     ##############################
 
-    # run
-    . ${MY_CONFIGS}/run.zsh
+    # Do Things
+    . ${MY_THINGS}/Thing/Do.zsh
 
 }
