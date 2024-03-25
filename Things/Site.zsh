@@ -6,10 +6,7 @@ if [ ! ${2} ]; then
 
 else
 
-    # Show Thing Options
-    . ${F_THING_OPTIONS}
-
-    # Do Things
-    # . ${MY_THINGS}/Thing/Do.zsh
+    # Get Functions Body
+    . ${F_BODY}
 
 fi

@@ -18,6 +18,6 @@ function my() {
     ##############################
 
     # Do Things
-    . ${MY_THINGS}/Thing/Do.zsh
+    . ${MY_CONFIGS}/Load.zsh
 
 }
