@@ -9,7 +9,7 @@ function my() {
     local MY_CONFIGS="${MY_HOME}/_configs"
 
     # define defaults
-    local MY_SETTINGS="${MY_CONFIGS}/init.zsh"
+    local MY_INIT="${MY_CONFIGS}/init.zsh"
     local MY_SETTINGS="${MY_CONFIGS}/settings.zsh"
 
     # get settings
@@ -21,7 +21,14 @@ function my() {
     # init
     . ${MY_INIT}
 
-    
+    if [ -d "${MY_HOST}" ]; then
+        echo "Host folder found"
+        echo "${MY_HOST}"
+    else
+        echo "Host folder not found"
+        echo "${MY_HOST}"
+    fi
+
 
     ##############################
 
