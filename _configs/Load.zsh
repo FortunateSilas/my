@@ -14,7 +14,7 @@ case "${USER_INPUT}" in
     "${USER_INPUT}" )
 
         # Get Functions Body
-        . ${F_THING}
+        . ${F_BODY}
 
     ;;
 esac
