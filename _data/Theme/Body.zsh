@@ -1,9 +1,14 @@
 # START CALL FUNCTION #################
 
-# Get Called Function
-local MY_FILE="${MY_FUNCTIONS}/${THING}/${DO}/${USER_INPUT}.zsh"
+. ${F_THING_OPTIONS}
 
-. ${MY_FILE}
+echo "\n"
+
+# User Input
+read INPUT
+
+# Get Called Function
+DoSomething ${INPUT}
 
 
 # END CALL FUNCTION #################

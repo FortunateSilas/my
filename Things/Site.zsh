@@ -1,12 +1,6 @@
-# Load Site
-if [ ! ${2} ]; then
-
-    # Show Thing Options
-    . ${F_THING_HOME}
-
-else
-
-    # Get Functions Body
-    . ${F_BODY}
-
-fi
+echo "Welcome to my ${THING} home"
+echo "In here you will be able to :"
+echo "\n"
+echo "01. Add"
+echo "02. Delete"
+echo "03. Update"

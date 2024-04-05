@@ -1,10 +1,20 @@
 # Load Site
-if [ ! ${2} ]; then
 
-    echo "Running ${(C)THING}"
+if [ ! ${1} ]; then
+
+    local THIS_HEADER="my"
+
+elif [ ! ${2} ]; then
+
+    local THIS_HEADER="my / ${1}"
 
 else
 
-    echo "Running ${(C)THING}/${(C)DO}"
+    local THIS_HEADER="my / ${1} / ${2}"
 
 fi
+
+echo "Header: ${THIS_HEADER}"
+
+echo "#########################################################"
+echo "\n"

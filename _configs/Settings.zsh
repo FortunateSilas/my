@@ -14,8 +14,16 @@ local F_BODY="${MY_DATA_THEME}/Body.zsh"
 # Thing
 local F_THING="${MY_THINGS}/${THING}.zsh"
 
-# Home
-local F_THING_HOME="${MY_FUNCTIONS}/${THING}/Home.zsh"
-
 # Options
 local F_THING_OPTIONS="${MY_FUNCTIONS}/${THING}/Options.zsh"
+
+# Do
+local F_THING_OPTIONS="${MY_FUNCTIONS}/${THING}/Options.zsh"
+
+function DoSomething() {
+
+    local MY_FILE="${MY_FUNCTIONS}/${THING}/${DO}/${1}.zsh"
+
+    . ${MY_FILE}
+    
+}

@@ -1,21 +1,29 @@
 
-# Get Essential Variables
+# Define Essential Variables
 local EV="${HOME}/my/_ev.zsh"
+
+# Get Essential Variables
 . ${EV}
 
-. ${MY_ALIASES}
+# Get Settings
+. ${MY_SETTINGS}
 
+# Get Core Functions
+source "${MY_CORE}/*"
+
+# define Essential Variables
 function my() {
 
-    # Init
-    . ${MY_INIT}
+    if [ ! -d "${HOME}/Host" ]; then
 
-    # get settings
-    . ${MY_SETTINGS}
+        # Init Host
+        . ${MY_INIT}
 
-    ##############################
+    else
 
-    # Do Things
-    . ${MY_CONFIGS}/Load.zsh
+        # Load
+        . ${MY_LOAD}
+
+    fi
 
 }

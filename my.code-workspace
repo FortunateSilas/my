@@ -6,10 +6,7 @@
 		},
 		{
 			"name": "__myzsh_old",
-			"path": "../Host/__myzsh_old"
-		},
-		{
-			"path": "../.oh-my-zsh/custom"
+			"path": "../Host 2/__myzsh_old"
 		}
 	],
 	"settings": {}

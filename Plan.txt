@@ -1,6 +1,3 @@
-my
-- Index file
-
-Init
-
-Settings
+Appname
+Type
+Database
