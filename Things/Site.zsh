@@ -1,6 +1,0 @@
-echo "Welcome to my ${THING} home"
-echo "In here you will be able to :"
-echo "\n"
-echo "01. Add"
-echo "02. Delete"
-echo "03. Update"

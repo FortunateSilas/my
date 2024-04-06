@@ -1,15 +1,11 @@
 
 # Define Essential Variables
-local EV="${HOME}/my/_ev.zsh"
-
-# Get Essential Variables
-. ${EV}
+source "_/EV"
 
 # Get Settings
 . ${MY_SETTINGS}
 
 # Get Core Functions
-source "${MY_CORE}/*"
 
 # define Essential Variables
 function my() {
@@ -21,8 +17,32 @@ function my() {
 
     else
 
-        # Load
-        . ${MY_LOAD}
+        Clear
+
+        # Get Header
+        . ${F_HEADER}
+
+        ######################################
+
+        if [ ! ${1} ]; then
+
+            echo "Loading my"
+
+        elif [ ! ${2} ]; then
+
+            echo "Loading my / ${1}"
+
+            # Show Thing Options
+            . ${F_THING}
+
+        else
+
+            echo "Loading my / ${1} / ${2}"
+
+            # Get Functions Body
+            . ${F_BODY}
+            
+        fi
 
     fi
 

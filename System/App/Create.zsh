@@ -7,6 +7,13 @@ echo "Enter name of the App"
 echo "\n"
 
 read THISAPPNAME
+
+echo "Choose Framework."
+echo "\n"
+
+read THISAPPFRANEWORK
+local AppFramework="${(C)THISAPPFRANEWORK}"
+
 local AppName="${(C)THISAPPNAME}"
 local AppInfoFile="${(C)THISAPPNAME}.txt"
 
@@ -23,9 +30,8 @@ if [ ! -d "${MY_APPS}/${AppName}"  ]; then\s
     folder-enter ${AppName}
 
     # 1 Second Break
-    Rest
 
-    # Choose type
+    RestM3 "Processing"
 
     # Secure Folder
     RestM4 "Securing ${AppName}"
