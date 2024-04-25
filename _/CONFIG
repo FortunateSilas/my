@@ -1,0 +1,100 @@
+# define my home
+local MY="${HOME}/my"
+
+# configs
+local MY_CONFIGS="${MY}/_"
+
+# define defaults
+local MY_SYSTEM="${MY_CONFIGS}/SYSTEM"
+local MY_INIT="${MY_CONFIGS}/INIT"
+local MY_CORE_FILE="${MY_CONFIGS}/CORE"
+local MY_FUNCTIONS_FILE="${MY_CONFIGS}/FUNCTIONS"
+
+# Program Dirs #######################
+
+# Core
+local MY_CORE="${MY}/Core"
+
+# Functions
+local MY_FUNCTIONS="${MY}/Functions"
+
+# data
+local MY_DATA="${MY}/Data"
+local MY_DATA_APPS="${MY_DATA}/Apps"
+local MY_DATA_SYSTEM="${MY_DATA}/System"
+local MY_DATA_TOOLS="${MY_DATA}/Tools"
+
+# Theme
+local MY_THEME="${MY}/Theme"
+
+# Things
+local MY_THINGS="${MY}/Things"
+
+function source-core() {
+
+
+    # Specify the directory containing the .zsh files
+    local DIR="${HOME}/my/Core"
+
+    # Specify the output file
+    local FILE="${HOME}/my/_/CORE"
+
+    echo -n > ${FILE}
+
+    sleep 1
+
+    # Loop through each .zsh file in the DIR
+    for file in "$DIR"/*; do
+        # Check if the file exists and is readable
+        if [ -r "$file" ]; then
+            # Append the source command to the output file
+            echo "source \"$file\"" >> "$FILE"
+        fi
+    done
+}
+
+function source-functions() {
+
+
+    # Specify the directory containing the .zsh files
+    local DIR="${HOME}/my/Functions"
+
+    # Specify the output file
+    local FILE="${HOME}/my/_/FUNCTIONS"
+
+    echo -n > ${FILE}
+
+    sleep 1
+
+    # Loop through each .zsh file in the DIR
+    for file in "$DIR"/*; do
+        # Check if the file exists and is readable
+        if [ -r "$file" ]; then
+            # Append the source command to the output file
+            echo "source \"$file\"" >> "$FILE"
+        fi
+    done
+}
+
+source-core
+source-functions
+
+# Host Dirs ##########################
+
+# Host
+local HOST="${HOME}/Host"
+
+# Host Data
+local HOSTDATA="${HOST}/_"
+
+# Host Cabin
+local HOSTDATACABIN="${HOSTDATA}/Cabin"
+
+# Host Cabin Frameworks
+local HOSTDATACABINFRAMEWORKS="${HOSTDATACABIN}/Frameworks"
+
+# Host Cabin Tools
+local HOSTDATACABINTOOLS="${HOSTDATACABIN}/Tools"
+
+# Host Apps
+local MYAPPS="${HOST}/Apps"

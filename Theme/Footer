@@ -1,0 +1,21 @@
+# Load Site
+
+if [ ! ${1} ]; then
+
+    local THIS_FOOTER="my"
+
+elif [ ! ${2} ]; then
+
+    local THIS_FOOTER="my / ${1}"
+
+else
+
+    local THIS_FOOTER="my / ${1} / ${2}"
+
+fi
+
+
+echo "\n"
+echo "#######################################"
+
+echo "Footer: ${THIS_FOOTER}"

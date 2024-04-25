@@ -1,0 +1,3 @@
+function Blank() {
+    echo "I'm a Blank Site"
+}

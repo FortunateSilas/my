@@ -1,0 +1,6 @@
+# Pause
+function Pause() {
+
+    # Pause
+    shell-pause
+}

@@ -1,0 +1,57 @@
+# Loading
+function Loading() {
+
+    # Clear 
+
+    # Loading
+    shell-loading ${1}
+    shell-pause
+}
+
+# Loading Spinner
+function Loading2S() {
+
+    # Loading Spinner
+    Loading "${1} ."
+    Loading "${1} .."
+}
+
+# Loading Spinner
+function Loading3S() {
+
+    # Loading Spinner
+    Loading "${1} ."
+    Loading "${1} .."
+    Loading "${1} ..."
+}
+
+# Loading Spinner
+function Loading4S() {
+
+    # Loading Spinner
+    Loading "${1} ."
+    Loading "${1} .."
+    Loading "${1} ..."
+    Loading "${1} ...."
+}
+
+# Loading Spinner
+function Loading5S() {
+
+    # Loading Spinner
+    Loading "${1} ."
+    Loading "${1} .."
+    Loading "${1} ..."
+    Loading "${1} ...."
+    Loading "${1} ....."
+}
+
+# Loading Spinner
+function LoadingSpinner() {
+
+    # Loading Spinner
+    Loading "\  | ${1} ."
+    Loading "-  | ${1} .."
+    Loading "/  | ${1} ..."
+    Loading "-  | ${1} ...."
+}

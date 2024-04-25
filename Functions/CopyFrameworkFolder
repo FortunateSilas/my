@@ -1,0 +1,7 @@
+# Copy Framework Folder
+function CopyFrameworkFolder() {
+
+    # Copy Framework Folder
+    cp -r ${HOSTDATACABINFRAMEWORKS}/${1} ${2}
+
+}

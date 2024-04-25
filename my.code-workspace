@@ -5,6 +5,10 @@
 			"path": "."
 		},
 		{
+			"name": "Host",
+			"path": "../Host"
+		},
+		{
 			"name": "__myzsh_old",
 			"path": "../Host 2/__myzsh_old"
 		}

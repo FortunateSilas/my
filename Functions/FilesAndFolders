@@ -1,0 +1,117 @@
+# Folder Functions
+
+# Folder New
+function FolderCreate() {
+
+    # Create Folder
+    folder-create ${1}
+}
+
+# Folder Enter
+function FolderEnter() {
+
+    # Enter Folder
+    folder-enter ${1}
+}
+
+# Folder Exit
+function FolderExit() {
+
+    # Exit Folder
+    folder-exit
+}
+
+# #################################
+
+# File Functions
+
+# File Create
+function FileCreate() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+    local FILE=${FILENAME}.${EXTENSION}
+
+    # File Create
+    file-create ${FILE}
+
+}
+
+# File Create
+function FileRead() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+    local OPTION=${3}
+
+    if [ ! "${3}" ]; then
+
+        # File Read
+        file-read ${FILENAME} ${EXTENSION}
+
+    else
+
+        # File Read
+        file-read-line ${FILENAME} ${EXTENSION} ${OPTION}
+
+    fi
+
+}
+
+# File Edit
+function FileEdit() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+
+    # Edit File
+    file-edit ${FILENAME}.${EXTENSION}
+}
+
+# File Write
+function FileWrite() {
+
+    # Variables
+    local MESSAGE="${1}"
+    local FILENAME=${2}
+    local EXTENSION=${3}
+
+    # Write To File
+    file-write ${MESSAGE} ${FILENAME} ${EXTENSION}
+}
+
+# File Wipe
+function FileWipe() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+    local FILE=${FILENAME}.${EXTENSION}
+    local ALERT="Wiping ${FILE}. Continue?"
+
+    # If Yes [y]
+    function FileWipe_Yes() {
+
+        # Yes
+        file-wipe ${FILENAME} ${EXTENSION}
+
+    }
+
+    # If No [n]
+    function FileWipe_No() {
+        
+        # No
+        Write "Aborted. Have a good day."
+        Pause
+        Pause
+
+        Clear
+
+    }
+
+    shell-read-yesno ${ALERT} FileWipe_Yes FileWipe_No
+
+}

@@ -1,0 +1,24 @@
+local TestShellReadYesNo_Message="This is the TestShellReadYesNo | Choose [Y / N]"
+
+function TestShellReadYesNo_Yes() {
+
+    # Yes
+    clear
+    echo "Yes"
+
+}
+
+function TestShellReadYesNo_No() {
+
+    # No
+    clear
+    echo "No"
+
+}
+
+function TestShellReadYesNo() {
+
+    # Shell Read Yes No
+    shell-read-yesno ${TestShellReadYesNo_Message} TestShellReadYesNo_Yes TestShellReadYesNo_No
+
+}

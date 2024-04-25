@@ -1,0 +1,23 @@
+# Write
+function Write() {
+
+    # Shell Write
+    shell-message ${1}
+}
+
+# Line
+function Line() {
+
+    # Shell Write New Line
+    echo "\n"
+}
+
+function WriteLine() {
+
+    # Shell Write
+    shell-message ${1}
+
+    # Shell Write New Line
+    echo "\n"
+    
+}

@@ -1,0 +1,13 @@
+# TestSEDFindReplace
+function TestSEDAddToPath() {
+
+    # SED Find Replace
+    sed-add-to-path ${1}
+
+    # local Old=":$PATH"
+    # local New=":${1}"
+
+    # sed -i "s+${Old}+:$HOME+${New}${Old}+g" ~/.zshrc
+
+    # sed -i 's|:$PATH|'${New}':$PATH|g' ~/.zshrc
+}

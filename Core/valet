@@ -1,0 +1,111 @@
+# Valet Start
+function valet-start() {
+
+    # Start the Valet services
+    valet start
+}
+
+# Valet Stop
+function valet-stop() {
+
+    # Stop the Valet services
+    valet stop
+}
+
+# Valet Domain
+function valet-domain() {
+
+    # Get or set the domain used for Valet sites
+    valet domain ${1}
+}
+
+# Valet Forget
+function valet-forget() {
+
+    # Remove the current working (or specified) directory from Valet's list of paths
+    valet forget
+
+}
+
+# Valet Install
+function valet-install() {
+
+    # Install the Valet services
+    valet install
+}
+
+# Valet Link
+function valet-link() {
+
+    # Link the current working directory to Valet
+    valet link
+}
+
+# Valet Links
+function valet-links() {
+
+    # Display all of the registered Valet links
+    valet links
+}
+
+# Valet Open
+function valet-open() {
+
+    # Open the site for the current (or specified) directory in your browser
+    valet open
+}
+
+# Valet Park
+function valet-park() {
+    # Register the current working (or specified) directory with Valet
+    valet park
+}
+
+# Valet Paths
+function valet-park() {
+
+    # Get all of the paths registered with Valet
+    valet park
+}
+
+# Valet Port
+function valet-port() {
+
+    # Get or set the port number used for Valet sites
+    valet port
+}
+
+# Valet Restart
+function valet-restart() {
+
+    # Restart the Valet services
+    valet restart
+}
+
+# Valet Secure
+function valet-secure() {
+
+    # Secure the given domain with a trusted TLS certificate
+    valet secure
+}
+
+# Valet Unsecure
+function valet-unsecure() {
+
+    # Stop serving the given domain over HTTPS and remove the trusted TLS certificate
+    valet unsecure
+}
+
+# Valet Update
+function valet-update() {
+
+    # Update Valet Linux and clean up cruft
+    valet update
+}
+
+# Valet Which
+function valet-which() {
+
+    # Determine which Valet driver serves the current working directory
+    valet which
+}

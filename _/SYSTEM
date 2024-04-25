@@ -1,0 +1,33 @@
+# Parameters Above All
+local THING="${1}"  # Thing
+local DO="${2}"     # Do
+
+#######################################
+
+# Load CORE
+. ${MY_CORE_FILE}
+
+# Load FUNCTIONS
+. ${MY_FUNCTIONS_FILE}
+
+# Theme ##################################
+
+# Header
+local MY_HEADER="${MY_THEME}/Header"
+
+# Footer
+local MY_FOOTER="${MY_THEME}/Footer"
+
+# Body
+local MY_BODY="${MY_THEME}/Body"
+
+# App ##################################
+
+# App
+local MY_APP_FRAMEWORK="${MY_DATA_APPS}/app-frameworks"
+
+
+# Pacakges
+
+# MySQL
+local MYSQL_PASSWORD=""

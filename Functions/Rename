@@ -1,0 +1,8 @@
+# Rename
+function Rename() {
+
+    # Rename
+    mv ${1} ${2}
+}
+
+# Search for a package called Rename

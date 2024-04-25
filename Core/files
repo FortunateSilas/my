@@ -1,0 +1,99 @@
+# Files
+
+# File Create
+function file-create() {
+
+    # Create File
+    touch ${1}
+
+}
+
+# File Read
+function file-read() {
+
+    local FILENAME="${1}"
+    local EXTENSION="${2}"
+    local FILE="${FILENAME}.${EXTENSION}"
+
+    # Define an empty array
+    local lines=()
+
+    # Read File
+
+    # Read lines from the file using a while loop
+    while IFS= read -r line; do
+
+        # Add each line to the array
+        lines+=("$line")
+
+    # File & Extension
+    done < "${FILE}"
+
+    # Print the contents of the array
+    printf '%s\n' "${lines[@]}"
+
+}
+
+# File Read by Line
+function file-read-line() {
+
+    local FILENAME="${1}"
+    local EXTENSION="${2}"
+    local FILE="${FILENAME}.${EXTENSION}"
+
+    # Define an empty array
+    local lines=()
+
+    # Read File
+
+    # Read lines from the file using a while loop
+    while IFS= read -r line; do
+
+        # Add each line to the array
+        lines+=("$line")
+
+    # File & Extension
+    done < "${FILE}"
+
+    # Print the contents of the array
+    printf '%s\n' "${lines[${3}]}"
+
+    # ------------------------------------------
+    # Usage: 
+    # file-read-line "nameoffile" ".txt" 3
+
+}
+
+# File Edit
+function file-edit() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+
+    # Edit File
+    gedit "${FILENAME}.${EXTENSION}"
+}
+
+# File Write
+function file-write() {
+
+    # Variables
+    local MESSAGE=${1}
+    local FILENAME=${2}
+    local EXTENSION=${3}
+
+    echo "${MESSAGE}" >> ${FILENAME}.${EXTENSION}
+}
+
+# File Empty Contents
+function file-wipe() {
+
+    # Variables
+    local FILENAME=${1}
+    local EXTENSION=${2}
+    local FILE=${FILENAME}.${EXTENSION}
+
+    echo -n > ${FILE}
+
+}

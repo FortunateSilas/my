@@ -1,0 +1,62 @@
+
+# Get Config
+. "${HOME}/my/_/CONFIG"
+
+# Get System
+. "${HOME}/my/_/SYSTEM"
+
+# First time run
+if [ ! -d "${HOME}/Host" ]; then
+
+    # Init Host
+    . "${HOME}/my/INIT"
+
+else
+
+    # Skip
+
+fi
+
+# define Essential Variables
+function my() {
+
+    if [ ! -d "${HOME}/Host" ]; then
+
+        # Init Host
+        . ${MY_INIT}
+
+    else
+
+        # Clear
+
+        # Get Header
+        # . ${MY_HEADER}
+
+        ####################################
+
+        if [ ! ${1} ]; then
+
+            # echo "Loading my"
+            # echo "my | 0 PARAMETERS"
+
+        elif [ ! ${2} ]; then
+
+            # echo "my | 1 PARAMETERS"
+
+        else
+
+            # echo "my | 2 PARAMETERS"
+        
+            . ${MY_BODY}
+            
+        fi
+
+        ####################################
+
+        # Get Header
+        # . ${MY_FOOTER}
+
+
+    fi
+
+}

@@ -1,0 +1,17 @@
+# SED Find Replace
+function sed-find-replace() {
+
+    local Old=${1}
+    local New=${2}
+    local Filename=${3}
+
+    # SED Find Replace
+    sed -i 's|'${Old}'|'${New}'|g' ${Filename}
+}
+
+# SED Add to path
+function sed-add-to-path() {
+
+    # SED Find Replace
+    sed -i 's|:$PATH|:'${1}':$PATH|g' ${HOME}/.zshrc
+}

@@ -1,0 +1,7 @@
+# Do Something
+function DoSomething() {
+
+    local MY_FILE="${MY_THINGS}/${1}/${2}"
+    . ${MY_FILE}
+    
+}

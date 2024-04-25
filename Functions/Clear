@@ -1,0 +1,6 @@
+# Clear
+function Clear() {
+
+    # Shell Clear
+    shell-clear
+}

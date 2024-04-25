@@ -1,0 +1,4 @@
+# Create Database
+function database-create() {
+    mysql -u root -p '' -e 'CREATE DATABASE '${1}';'
+}

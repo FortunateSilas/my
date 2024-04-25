@@ -1,0 +1,7 @@
+# Refresh
+function Refresh() {
+
+    # Shell Refresh
+    shell-refresh
+    shell-clear
+}

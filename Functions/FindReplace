@@ -1,0 +1,6 @@
+# Find Replace
+function FindReplace() {
+
+    # SED Find Replace
+    sed-find-replace ${1} ${2} ${3}
+}

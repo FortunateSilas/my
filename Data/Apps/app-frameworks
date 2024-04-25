@@ -1,0 +1,32 @@
+function app-frameworks-list() {
+
+    echo "Blank"
+    echo "Wordpress"
+    echo "Laravel"
+    echo "Bedrock"
+    echo "\n"
+
+}
+
+function wp-config-edit-database() {
+
+    FindReplace "database_name_here" "${1}" wp-config.php
+}
+
+function wp-config-edit-username() {
+
+    FindReplace "username_here" "${1}" wp-config.php
+}
+
+function wp-config-edit-password() {
+
+    FindReplace "define( 'DB_PASSWORD', 'password_here' );" "define( 'DB_PASSWORD', '${MYSQL_PASSWORD}' );" wp-config.php
+}
+
+function wp-config-edit() {
+
+    wp-config-edit-database ${1}
+    wp-config-edit-username "root"
+    wp-config-edit-password " "
+
+}

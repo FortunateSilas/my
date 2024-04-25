@@ -1,0 +1,6 @@
+# AddToPath
+function AddToPath() {
+
+    # SED Add To Path
+    sed-add-to-path ${1}
+}

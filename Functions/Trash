@@ -1,0 +1,6 @@
+# Trash
+function Trash() {
+
+    # Trash
+    trash ${1}
+}

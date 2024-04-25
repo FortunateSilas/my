@@ -1,0 +1,125 @@
+. ${MY_APP_FRAMEWORK}
+
+Refresh
+
+# Enter Apps Folder
+FolderEnter ${MYAPPS}
+
+# App Name
+Write "1. Enter name of the App:"
+read THISAPPNAME
+
+local AppName="${(C)THISAPPNAME}"
+
+# Empty Line
+Line
+
+# Framework
+Write "2. Choose Framework for ${AppName}:"
+app-frameworks-list
+
+read THISAPPFRANEWORK
+
+local AppFramework="${(C)THISAPPFRANEWORK}"
+local AppInfoFile="${(C)THISAPPNAME}"
+local AppInfoFileExt="txt"
+
+Line
+
+# Condition
+# In Folder Doesn't Exist
+if [ ! -d "${MYAPPS}/${AppName}"  ]; then
+
+    # Create Folder
+    WriteLine "3. Creating ${AppName}: Downloading / Copying ${AppFramework} to ${AppName} folder. "
+    CopyFrameworkFolder ${AppFramework} ${AppName}
+
+    # 2 Second Break
+    Pause
+    Pause
+
+    # Enter folder
+    FolderEnter ${AppName}
+
+    # read -s -k "?Press [ENTER] to continue."
+
+    # Secure Folder
+    WriteLine "4. Securing ${AppName}: Issuing an SSL certificate for ${AppName}."
+    valet-secure
+
+    # Empty Line
+    Line
+
+    # create "Appname.txt"
+    WriteLine "5. Creating info file: ${AppInfoFile}.${AppInfoFileExt}."
+    file-create "${AppInfoFile}.${AppInfoFileExt}"
+
+    # 1 Sec Break
+    Pause
+
+    # Write into Appname.txt
+    WriteLine "6. Adding info to ${AppInfoFile}.${AppInfoFileExt}."
+    FileWrite ${AppName} ${AppInfoFile} ${AppInfoFileExt}
+    FileWrite ${AppFramework} ${AppInfoFile} ${AppInfoFileExt}
+
+    # Create Database
+    WriteLine "7. Creating Database for ${AppName}."
+    database-create ${AppName}
+
+    # Empty Line
+    Line
+
+    # Copy wp-config file
+    WriteLine "8. Editing wp-config.php."
+    cp wp-config-sample.php wp-config.php
+
+    # 1 Second Break
+    Pause
+
+    # Clear
+    # Clear
+
+    # Read lines from wp-config.php
+    WriteLine "9. Initial wp-config.php information."
+    FileRead "wp-config" "php" 23
+    FileRead "wp-config" "php" 26
+    FileRead "wp-config" "php" 29
+
+    # Empty Line
+    Line
+
+    # 12 Second Break
+    Pause
+    Pause
+
+    # Read & Enter
+    WriteLine "10. Editing wp-config.php"
+
+    # Edit wp-config.php
+    wp-config-edit ${AppName}
+
+    # 1 Second Break
+    Pause
+
+    # Clear
+    # Clear
+
+    # Write & Line
+    WriteLine "11. Edited."
+
+    # Read lines from wp-config.php
+    FileRead "wp-config" "php" 23
+    FileRead "wp-config" "php" 26
+    FileRead "wp-config" "php" 29
+
+    # Line
+    Line
+
+    Write "Successfully created ${AppName} using ${AppFramework}."
+
+else
+
+    # Read & Enter
+    shell-read-enter "This App exists, now exiting. "
+
+fi
