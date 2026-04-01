@@ -1,0 +1,114 @@
+# Main
+# Z="${HOME}/my"
+# SYSTEM="${HOME}/my/_"
+# SETTINGS="${HOME}/my/_/Settings"
+
+# # This Folder
+# THIS_FOLDER=$(printf '%s\n' "${PWD##*/}")
+
+# # Valet Domain
+# VALET_DOMAIN=$(valet domain)
+
+echo "Config File"
+
+# ################################################
+
+# Directories
+
+# Core
+CORE="${HOME}my/Core"
+
+# App
+APP="${HOME}/my/App"
+
+# Data
+DATA="${HOME}/my/__/Data"
+DATA_A="${HOME}/my/__/Data/Apps"
+DATA_H="${HOME}/my/__/Data/Host"
+DATA_T="${HOME}/my/__/Data/Templates"
+DATA_T="${HOME}/my/__/Data/Tools"
+
+# Scripts
+SCRIPTS="${HOME}/my/__/SCRIPTS"
+SCRIPTS_A="${HOME}/my/__/SCRIPTS/Apps"
+SCRIPTS_H="${HOME}/my/__/SCRIPTS/Host"
+
+
+# Host Architecture
+HOST="${HOME}/Host"
+HOST_A="${HOME}/Host/Apps"
+HOST_D="${HOME}/Host/__Data"
+HOST_F="${HOME}/Host/__Data/Frameworks"
+HOST_T="${HOME}/Host/__Data/Tools"
+
+#############################################################
+
+# System Vars
+
+#############################################################
+# Core ######################################################
+#############################################################
+
+# valet
+VALET_DOMAIN="www"
+VALET_PATH="${HOME}/.valet"
+VALET_LOGS="${VALET_PATH}/Log"
+VALET_CERTIFICATES="${VALET_PATH}/Certificates"
+VALET_NGINX="${VALET_PATH}/Nginx"
+
+#mysql
+MYSQL_USERNAME="root"
+MYSQL_PASSWORD=""
+
+# Packages
+
+# Functions
+
+#############################################################
+# Host ######################################################
+#############################################################
+
+# Segments
+
+# 1. Apps
+# 2. Tools
+# 3. Frameworks
+
+#############################################################
+# Apps ######################################################
+#############################################################
+
+# General
+USER_EMAIL="fortunatesilas.art@gmail.com"
+
+# WordPress
+WP_USER_NAME="Fortunate"
+WP_USER_PASSWORD="aaa"
+
+
+# NodeJs
+
+
+# Blank
+
+
+##########################################3
+
+# SED Find Replace
+function sed_find_replace() {
+
+
+    local Old=${1}
+    local New=${2}
+    local Filename=${3}
+
+    # SED Find Replace
+    sed -i 's|'${Old}'|'${New}'|g' ${Filename}
+}
+
+# SED Add to path
+function sed_add_to_path() {
+
+    # SED Find Replace
+    sed -i 's|:$PATH|:'${1}':$PATH|g' ${HOME}/.zshrc
+}

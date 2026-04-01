@@ -1,0 +1,38 @@
+# define essential variables
+
+. "${HOME}/my/__/CONFIG"
+
+function my() {
+
+    if [ ! -d "${HOME}/Host" ]; then
+                
+        # Call Wordpress Create Script
+        . "${SCRIPTS_H}/host__initialize.zsh"
+
+    else
+
+        local APPS="${HOME}/Host/Apps"
+
+        cd ${APPS}
+
+        case "${1}" in
+            "Create" )
+                
+                # Call Wordpress Create Script
+                . "${SCRIPTS_A}/wordpress__create.zsh"
+
+            ;;
+            "Delete" )
+                
+                # Call Wordpress Delete Script
+                . "${SCRIPTS_A}/wordpress__delete.zsh"
+
+            ;;
+            * )
+                echo "Usage : my [ Create | Delete ]"
+            ;;
+        esac
+
+    fi
+
+}
