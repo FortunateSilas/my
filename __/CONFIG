@@ -9,8 +9,6 @@
 # # Valet Domain
 # VALET_DOMAIN=$(valet domain)
 
-echo "Config File"
-
 # ################################################
 
 # Directories
