@@ -22,15 +22,14 @@ CORE="${HOME}my/Core"
 APP="${HOME}/my/App"
 
 # Data
-DATA="${HOME}/my/__/Data"
-DATA_A="${HOME}/my/__/Data/Apps"
-DATA_H="${HOME}/my/__/Data/Host"
-DATA_T="${HOME}/my/__/Data/Templates"
-DATA_T="${HOME}/my/__/Data/Tools"
+DATA="${HOME}/my/__/DATA"
+DATA_A="${HOME}/my/__/DATA/Apps"
+DATA_T="${HOME}/my/__/DATA/Templates"
 
 # Scripts
 SCRIPTS="${HOME}/my/__/SCRIPTS"
-SCRIPTS_A="${HOME}/my/__/SCRIPTS/Apps"
+SCRIPTS_AF="${HOME}/my/__/SCRIPTS/AppFunctions"
+SCRIPTS_FA="${HOME}/my/__/SCRIPTS/FrameworkActions"
 SCRIPTS_H="${HOME}/my/__/SCRIPTS/Host"
 
 
