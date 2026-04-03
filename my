@@ -19,13 +19,13 @@ function my() {
             "Create" )
                 
                 # Call Wordpress Create Script
-                . "${SCRIPTS_A}/wordpress__create.zsh"
+                . "${SCRIPTS_AF}/wordpress__create.zsh"
 
             ;;
             "Delete" )
                 
                 # Call Wordpress Delete Script
-                . "${SCRIPTS_A}/wordpress__delete.zsh"
+                . "${SCRIPTS_AF}/wordpress__delete.zsh"
 
             ;;
             * )

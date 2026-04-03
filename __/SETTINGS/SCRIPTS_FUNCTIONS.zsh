@@ -1,0 +1,6 @@
+source "/home/fortunate/my/Functions/Function__Database.zsh"
+source "/home/fortunate/my/Functions/Function__File.zsh"
+source "/home/fortunate/my/Functions/Function__Folder.zsh"
+source "/home/fortunate/my/Functions/Function__Goto.zsh"
+source "/home/fortunate/my/Functions/Function__Host.zsh"
+source "/home/fortunate/my/Functions/Function__Wordpress.zsh"

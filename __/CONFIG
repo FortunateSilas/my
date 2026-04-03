@@ -16,7 +16,8 @@ echo "Config File"
 # Directories
 
 # Core
-CORE="${HOME}my/Core"
+CORE="${HOME}/my/Core"
+FUNCTIONS="${HOME}/my/Functions"
 
 # App
 APP="${HOME}/my/App"
@@ -31,6 +32,9 @@ SCRIPTS="${HOME}/my/__/SCRIPTS"
 SCRIPTS_AF="${HOME}/my/__/SCRIPTS/AppFunctions"
 SCRIPTS_FA="${HOME}/my/__/SCRIPTS/FrameworkActions"
 SCRIPTS_H="${HOME}/my/__/SCRIPTS/Host"
+
+# Settings
+SETTINGS="${HOME}/my/__/SETTINGS"
 
 
 # Host Architecture
@@ -111,3 +115,40 @@ function sed_add_to_path() {
     # SED Find Replace
     sed -i 's|:$PATH|:'${1}':$PATH|g' ${HOME}/.zshrc
 }
+
+
+
+function COMPILESCRIPTS() {
+
+
+    # Specify the directory containing the .zsh files
+    local DIR="${1}"
+
+    # Specify the output file
+    local FILE="${SETTINGS}/${2}.zsh"
+
+    # Reset CORE.zsh
+    echo -n > ${FILE}
+
+    sleep 1
+
+    if [ -n "$(ls -A ${DIR})" ]; then
+
+        # Loop through each .zsh file in the DIR
+        for file in "$DIR"/*; do
+            # Check if the file exists and is readable
+            if [ -r "$file" ]; then
+                # Append the source command to the output file
+                echo "source \"$file\"" >> "$FILE"
+            fi
+        done
+    fi
+}
+
+COMPILESCRIPTS ${CORE} "SCRIPTS_CORE"
+COMPILESCRIPTS ${FUNCTIONS} "SCRIPTS_FUNCTIONS"
+COMPILESCRIPTS ${DATA_A} "SCRIPTS_APPS"
+
+. ${SETTINGS}/SCRIPTS_CORE.zsh
+. ${SETTINGS}/SCRIPTS_FUNCTIONS.zsh
+. ${SETTINGS}/SCRIPTS_APPS.zsh

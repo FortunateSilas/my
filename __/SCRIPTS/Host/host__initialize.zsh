@@ -15,6 +15,7 @@ mkdir Blank && cd Blank
 
 valet link && valet secure
 
+
 cd ${HOME}
 
 echo "Done. Host Setup Successfully!!!"
