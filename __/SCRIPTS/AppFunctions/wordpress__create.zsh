@@ -57,5 +57,6 @@ else
     sed_find_replace 'local DIR="${HOST_A}/Wordpress"' "local DIR="${HOST_A}/${APPNAME}"" "${DATA_A}/${APPNAME}.zsh"
 
     source ~ /.zshrc
+    source ~ /.zshrc
 
 fi

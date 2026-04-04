@@ -5,15 +5,28 @@ read APPNAME_INPUT
 
 local APPNAME="${(C)APPNAME_INPUT}"
 
-echo "this will delete \"${APPNAME} \" from your Apps folder. (Coming Soon)"
+echo "This will delete \"${APPNAME}\" from your Apps folder. This action is irreversible. Do you want to continue? (y/n) : "
 
-# Delete Database
-mysql -u "${MYSQL_USERNAME}" --password="${MYSQL_PASSWORD}" -e 'DROP DATABASE '${APPNAME}';'
+read CONTINUE
 
-# Delete App's Folder
-rm -rf ${APPNAME}
+if [[ "${CONTINUE}" == "y" ]]; then
 
-# Delete SSL Certificate
-valet unsecure ${APPNAME}
+    # Delete Database
+    mysql -u "${MYSQL_USERNAME}" --password="${MYSQL_PASSWORD}" -e 'DROP DATABASE '${APPNAME}';'
 
-echo "Done. App Deleted Successfully!!!"
+    # Delete App's Folder
+    rm -rf ${APPNAME}
+
+    # Delete Data file
+    rm -rf ${DATA_A}/${APPNAME}.zsh
+
+    # Delete SSL Certificate
+    valet unsecure ${APPNAME}
+
+    echo "Done. App Deleted Successfully!!!"
+
+else
+
+    echo "Aborting Deletion Process. App is safe :)"
+
+fi

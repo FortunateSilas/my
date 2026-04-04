@@ -1,3 +1,5 @@
+source "/home/fortunate/my/__/DATA/Apps/Findmybiz.zsh"
 source "/home/fortunate/my/__/DATA/Apps/Indgnxt.zsh"
+source "/home/fortunate/my/__/DATA/Apps/Starterbricks.zsh"
 source "/home/fortunate/my/__/DATA/Apps/Test02.zsh"
 source "/home/fortunate/my/__/DATA/Apps/Test03.zsh"
