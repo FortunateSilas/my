@@ -33,3 +33,4 @@ else
     echo "Aborting Deletion Process. App is safe :)"
 
 fi
+
