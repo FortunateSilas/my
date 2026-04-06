@@ -20,6 +20,9 @@ if [[ "${CONTINUE}" == "y" ]]; then
     # Delete Data file
     rm -rf ${DATA_A}/${APPNAME}.zsh
 
+    # Delete Nginx Config File
+    rm -rf ${DATA_A}/${APPNAME}.${VALET_DOMAIN }
+
     # Delete SSL Certificate
     valet unsecure ${APPNAME}
 

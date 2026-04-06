@@ -52,14 +52,14 @@ HOST_T="${HOME}/Host/__Data/Tools"
 
 # valet
 VALET_DOMAIN="www"
-VALET_PATH="${HOME}/.valet"
+VALET_PATH="${HOME}/.config/valet"
 VALET_LOGS="${VALET_PATH}/Log"
 VALET_CERTIFICATES="${VALET_PATH}/Certificates"
 VALET_NGINX="${VALET_PATH}/Nginx"
 
 #mysql
 MYSQL_USERNAME="root"
-MYSQL_PASSWORD=""
+MYSQL_PASSWORD="root"
 
 # Packages
 
