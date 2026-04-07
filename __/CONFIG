@@ -61,6 +61,17 @@ VALET_NGINX="${VALET_PATH}/Nginx"
 MYSQL_USERNAME="root"
 MYSQL_PASSWORD="root"
 
+#php
+PHP_CONFIG_PATH="/etc/php/8.3/fpm"
+PHP_INI="${PHP_CONFIG_PATH}/php.ini"
+
+# nginx /etc/nginx
+NGINX_CONFIG_PATH="/etc/nginx"
+NGINX_CONFIG="${NGINX_CONFIG_PATH}/nginx.conf"
+NGINX_SITES_AVAILABLE="${NGINX_CONFIG_PATH}/sites-available"
+NGINX_SITES_ENABLED="${NGINX_CONFIG_PATH}/sites-enabled"
+
+
 # Packages
 
 # Functions

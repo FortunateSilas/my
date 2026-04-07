@@ -30,7 +30,7 @@ else
     mysql -u "${MYSQL_USERNAME}" --password="${MYSQL_PASSWORD}" -e 'CREATE DATABASE '${APPNAME}';'
 
     echo "Install Wordpress ${WP_USER_NAME} ${USER_EMAIL} ${WP_USER_PASSWORD}"
-    wp core install --url="https://${APPNAME}.${VALET_DOMAIN}" --title="${APPNAME}" --admin_user="${WP_USER_NAME}" --admin_email="${USER_EMAIL}" --admin_password="${WP_USER_PASSWORD}" --skip-email
+    wp core install --url="https://${(L)APPNAME}.${VALET_DOMAIN}" --title="${APPNAME}" --admin_user="${WP_USER_NAME}" --admin_email="${USER_EMAIL}" --admin_password="${WP_USER_PASSWORD}" --skip-email
 
     # Install SSL Certificate
     valet secure
