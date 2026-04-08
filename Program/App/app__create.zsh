@@ -3,7 +3,7 @@ echo "Enter your App/Website's name : "
 echo "=============================== "
 read APPNAME_INPUT
 
-local APPNAME="${(C)APPNAME_INPUT}"
+local APPNAME="${(L)APPNAME_INPUT}"
 
 echo "You typed : ${APPNAME}"
 

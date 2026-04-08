@@ -3,7 +3,7 @@ echo "Enter your App/Website's name : "
 echo "=============================== "
 read APPNAME_INPUT
 
-local APPNAME="${(C)APPNAME_INPUT}"
+local APPNAME="${(L)APPNAME_INPUT}"
 
 echo "This will delete \"${APPNAME}\" from your Apps folder. This action is irreversible. Do you want to continue? (y/n) : "
 
@@ -18,10 +18,10 @@ if [[ "${CONTINUE}" == "y" ]]; then
     rm -rf ${APPNAME}
 
     # Delete Data file
-    rm -rf ${DATA_A}/${APPNAME}.zsh
+    rm ${DATA_A}/${APPNAME}.zsh
 
     # Delete Nginx Config File
-    rm -rf ${DATA_A}/${APPNAME}.${VALET_DOMAIN }
+    rm ${VALET_NGINX}/${APPNAME}.${VALET_DOMAIN }
 
     # Delete SSL Certificate
     valet unsecure ${APPNAME}
