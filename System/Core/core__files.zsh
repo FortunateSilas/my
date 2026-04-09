@@ -1,8 +1,8 @@
 # Files
 
-# File Create
+# File Copy
 function file_copy() {
-    # Create File
+    # Copy File
     cp -f "${1}" "${2}"
 }
 
@@ -104,5 +104,3 @@ function file_wipe() {
     echo -n > ${FILE}
 
 }
-
-

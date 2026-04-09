@@ -7,7 +7,7 @@ function my() {
     if [ ! -d "${HOME}/Host" ]; then
                 
         # Call Wordpress Create Script
-        . "${SCRIPTS_H}/host__initialize.zsh"
+        . "${PROGRAM_H}/host__initialize.zsh"
 
     else
 

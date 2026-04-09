@@ -13,34 +13,36 @@
 
 # Directories
 
-# Core
-CORE="${HOME}/my/Core"
-FUNCTIONS="${HOME}/my/Functions"
+# System
+SYSTEM="${HOME}/my/System"
+SYSTEM_C="${SYSTEM}/Core"
+SYSTEM_F="${SYSTEM}/Functions"
 
-# App
-APP="${HOME}/my/App"
+# Program
+PROGRAM="${HOME}/my/Program"
+PROGRAM_A="${PROGRAM}/App"
+PROGRAM_H="${PROGRAM}/Host"
 
 # Data
 DATA="${HOME}/my/__/DATA"
-DATA_A="${HOME}/my/__/DATA/Apps"
-DATA_T="${HOME}/my/__/DATA/Templates"
+DATA_A="${DATA}/Apps"
+DATA_T="${DATA}/Templates"
 
 # Scripts
 SCRIPTS="${HOME}/my/__/SCRIPTS"
-SCRIPTS_AF="${HOME}/my/__/SCRIPTS/AppFunctions"
-SCRIPTS_FA="${HOME}/my/__/SCRIPTS/FrameworkActions"
-SCRIPTS_H="${HOME}/my/__/SCRIPTS/Host"
+SCRIPTS_AF="${SCRIPTS}/AppFunctions"
+SCRIPTS_FA="${SCRIPTS}/FrameworkActions"
 
 # Settings
 SETTINGS="${HOME}/my/__/SETTINGS"
 
 
-# Host Architecture
+# Host
 HOST="${HOME}/Host"
-HOST_A="${HOME}/Host/Apps"
-HOST_D="${HOME}/Host/__Data"
-HOST_F="${HOME}/Host/__Data/Frameworks"
-HOST_T="${HOME}/Host/__Data/Tools"
+HOST_A="${HOST}/Apps"
+HOST_D="${HOST}/__Data"
+HOST_F="${HOST_D}/Frameworks"
+HOST_T="${HOST_D}/Tools"
 
 #############################################################
 
@@ -93,6 +95,9 @@ NGINX_SITES_ENABLED="${NGINX_CONFIG_PATH}/sites-enabled"
 # General
 USER_EMAIL="fortunatesilas.art@gmail.com"
 
+# Blank
+
+
 # WordPress
 WP_USER_NAME="Fortunate"
 WP_USER_PASSWORD="aaa"
@@ -101,31 +106,10 @@ WP_USER_PASSWORD="aaa"
 # NodeJs
 
 
-# Blank
 
+##########################################
 
-##########################################3
-
-# SED Find Replace
-function sed_find_replace() {
-
-
-    local Old=${1}
-    local New=${2}
-    local Filename=${3}
-
-    # SED Find Replace
-    sed -i 's|'${Old}'|'${New}'|g' ${Filename}
-}
-
-# SED Add to path
-function sed_add_to_path() {
-
-    # SED Find Replace
-    sed -i 's|:$PATH|:'${1}':$PATH|g' ${HOME}/.zshrc
-}
-
-
+# COMPILE
 
 function COMPILESCRIPTS() {
 
@@ -154,8 +138,8 @@ function COMPILESCRIPTS() {
     fi
 }
 
-COMPILESCRIPTS ${CORE} "SCRIPTS_CORE"
-COMPILESCRIPTS ${FUNCTIONS} "SCRIPTS_FUNCTIONS"
+COMPILESCRIPTS ${SYSTEM_C} "SCRIPTS_CORE"
+COMPILESCRIPTS ${SYSTEM_F} "SCRIPTS_FUNCTIONS"
 COMPILESCRIPTS ${DATA_A} "SCRIPTS_APPS"
 
 . ${SETTINGS}/SCRIPTS_CORE.zsh

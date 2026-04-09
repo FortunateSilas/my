@@ -44,9 +44,8 @@ case "${APPFRAMEWORK}" in
 
         echo "You have selected : WordPress "
         echo "============================= "
+        echo "\n"
         . "${SCRIPTS_AF}/wordpress_create.zsh"
-        # copy bin/framework to apps/project
-        app_wordpress ${APPNAME}
 
     ;;
     * )
