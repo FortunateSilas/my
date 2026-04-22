@@ -1,5 +1,4 @@
-# define essential variables
-
+# Source Config
 . "${HOME}/my/__/CONFIG"
 
 function my() {
