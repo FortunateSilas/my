@@ -25,14 +25,19 @@ program_h="${program}/host"
 
 # Data
 data="${HOME}/my/config/data"
-data_a="${data}/Apps"
-data_t="${data}/Templates"
+data_a="${HOME}/my/config/data/apps"
+data_h="${HOME}/my/config/data/host"
+data_templates="${HOME}/my/config/data/templates"
+data_tools="${HOME}/my/config/data/tools"
 
-# Scripts
-scripts="${HOME}/my/config/scripts"
-
-# Actions
+#actions
 actions="${HOME}/my/config/actions"
+
+# scripts
+scripts="${HOME}/my/config/scripts"
+scripts_wp="${HOME}/my/config/scripts/wordpress"
+scripts_bl="${HOME}/my/config/scripts/blank"
+scripts_nj="${HOME}/my/config/scripts/nodejs"
 
 # Settings
 settings="${HOME}/my/config/settings"
@@ -41,6 +46,7 @@ settings="${HOME}/my/config/settings"
 # Host
 host="${HOME}/Host"
 host_a="${host}/Apps"
+host_d="${host}/__Data"
 host_f="${host_d}/Frameworks"
 host_t="${host_d}/Tools"
 
@@ -92,15 +98,16 @@ nginx_sites_enabled="${nginx_config_path}/sites-enabled"
 # Apps ######################################################
 #############################################################
 
+# user information
+
 # General
 user_email="fortunatesilas.art@gmail.com"
-
-# Blank
-
 
 # WordPress
 wp_user_name="Fortunate"
 wp_user_password="aaa"
+
+# Blank
 
 
 # NodeJs
@@ -138,10 +145,10 @@ function COMPILESCRIPTS() {
     fi
 }
 
-COMPILESCRIPTS ${system_c} "SCRIPTS_CORE"
-COMPILESCRIPTS ${system_f} "SCRIPTS_FUNCTIONS"
-COMPILESCRIPTS ${data_a} "SCRIPTS_APPS"
+COMPILESCRIPTS ${system_c} "scripts_core"
+COMPILESCRIPTS ${system_f} "scripts_functions"
+COMPILESCRIPTS ${data_a} "scripts_apps"
 
-. ${settings}/SCRIPTS_CORE.zsh
-. ${settings}/SCRIPTS_FUNCTIONS.zsh
-. ${settings}/SCRIPTS_APPS.zsh
+. ${settings}/scripts_core.zsh
+. ${settings}/scripts_functions.zsh
+. ${settings}/scripts_apps.zsh

@@ -1,4 +1,4 @@
-function Blank() {
+function blank() {
 
 	# Selector
     local OPTION=${1}
@@ -11,7 +11,7 @@ function Blank() {
 	local DBPASS="DBPASS"
 
 	# Directories
-	local DIR="${HOST_A}/Blank"
+	local DIR="${host_a}/blank"
 
 	if [ ! ${1} ]; then
 	
@@ -21,7 +21,7 @@ function Blank() {
 	else
 		cd $DIR
 
-		. "${ACTIONS}/blank.zsh"
+		. "${actions}/blank.zsh"
 		
 	fi
 

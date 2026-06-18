@@ -65,3 +65,8 @@ function folder_exit() {
     # Exit Folder
     cd ..
 }
+source "/home/fortunate/my/system/core/folders.zsh"
+source "/home/fortunate/my/system/core/folders.zsh"
+source "/home/fortunate/my/system/core/folders.zsh"
+source "/home/fortunate/my/system/core/folders.zsh"
+source "/home/fortunate/my/system/core/folders.zsh"

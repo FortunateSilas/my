@@ -1,4 +1,4 @@
-function Host() {
+function host() {
 
 
 	if [[ -z ${1} ]]; then
@@ -13,42 +13,42 @@ function Host() {
 
 		case "${OPTION}" in
 		
-			"Init" )
+			"init" )
 			# Host Initialize
 
 				# Comment
-				SOURCEFILE ${DATA_H} "host__initialize.zsh"
+				. "${program_h}/initializ.zsh"
 
 			;;
-			"Refresh" )
+			"refresh" )
 			# Host Refresh
 
 				# Comment
-				SOURCEFILE ${DATA_H} "Refresh"
+				. "${program_h}/refresh.zsh"
 
 			;;
-			"Start" )
+			"start" )
 			# Host Start
 
 				# Comment
-				SOURCEFILE ${DATA_H} "Start"
+				. "${program_h}/start.zsh"
 
 			;;
-			"Stop" )
+			"stop" )
 			# Host Stop
 
 				# Comment
-				SOURCEFILE ${DATA_H} "Stop"
+				. "${program_h}/stop.zsh"
 
 			;;
-			"Domain" )
+			"domain" )
 			# Host Stop
 
 				# Comment
 				valet_domain ${2}
 
 			;;
-			"Remove" )
+			"remove" )
 			# Host Stop
 
 				# Remove domain ssl
@@ -62,14 +62,14 @@ function Host() {
 
 				echo "You've entered the wrong option"
 				echo "Try one of the following options:"
-				echo "Init"
-				echo "Refresh"
-				echo "Start"
-				echo "Stop"
-				echo "Domain"
+				echo "\ninit\nrefresh\nstart\nstop\ndomain\nremove"
 
 			;;
 		esac
 	fi
 
-}
+}source "/home/fortunate/my/system/functions/host.zsh"
+source "/home/fortunate/my/system/functions/host.zsh"
+source "/home/fortunate/my/system/functions/host.zsh"
+source "/home/fortunate/my/system/functions/host.zsh"
+source "/home/fortunate/my/system/functions/host.zsh"

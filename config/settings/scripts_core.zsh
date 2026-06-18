@@ -1,7 +1,0 @@
-source "/home/fortunate/my/System/Core/core__files.zsh"
-source "/home/fortunate/my/System/Core/core__folders.zsh"
-source "/home/fortunate/my/System/Core/core__mysql.zsh"
-source "/home/fortunate/my/System/Core/core__sed.zsh"
-source "/home/fortunate/my/System/Core/core__shell.zsh"
-source "/home/fortunate/my/System/Core/core__valet.zsh"
-source "/home/fortunate/my/System/Core/core__wordpress.zsh"

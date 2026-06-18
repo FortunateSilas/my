@@ -1,106 +1,110 @@
-# Files
+# files
 
-# File Copy
+# file copy
 function file_copy() {
-    # Copy File
+    # copy file
     cp -f "${1}" "${2}"
 }
 
-# File Create
+# file create
 function file_create() {
-    # Create File
+    # create file
     touch "${1}"
 }
 
-# File Edit
+# file edit
 function file_edit() {
 
-    # Edit File
+    # edit file
     gedit "${1}"
 }
 
-# File Edit
+# file edit
 function file_delete() {
 
-    # Edit File
+    # edit file
     rm -f "${1}"
 }
 
-# File Rename
+# file rename
 function file_rename() {
 
-    # Edit File
+    # edit file
     mv "${1}" "${2}"
 }
 
-# File Read
+# file read
 function file_read() {
 
-    local FILE="${1}"
+    local file="${1}"
 
-    # Define an empty array
+    # define an empty array
     local lines=()
 
-    # Read File
+    # read file
 
-    # Read lines from the file using a while loop
-    while IFS= read -r line; do
+    # read lines from the file using a while loop
+    while ifs= read -r line; do
 
-        # Add each line to the array
+        # add each line to the array
         lines+=("$line")
 
-    # File & Extension
-    done < "${FILE}"
+    # file & extension
+    done < "${file}"
 
-    # Print the contents of the array
+    # print the contents of the array
     printf '%s\n' "${lines[@]}"
 
 }
 
-# File Read by Line
+# file read by line
 function file_read_line() {
 
-    local FILE="${1}"
+    local file="${1}"
 
-    # Define an empty array
+    # define an empty array
     local lines=()
 
-    # Read File
+    # read file
 
-    # Read lines from the file using a while loop
-    while IFS= read -r line; do
+    # read lines from the file using a while loop
+    while ifs= read -r line; do
 
-        # Add each line to the array
+        # add each line to the array
         lines+=("$line")
 
-    # File & Extension
-    done < "${FILE}"
+    # file & extension
+    done < "${file}"
 
-    # Print the contents of the array
+    # print the contents of the array
     printf '%s\n' "${lines[${2}]}"
 
     # ------------------------------------------
-    # Usage: 
+    # usage: 
     # file-read-line "nameoffile" ".txt" 3
 
 }
 
-# File Write
+# file write
 function file_write() {
 
-    # Variables
-    local FILE=${1}
-    local MESSAGE=${2}
+    # variables
+    local file=${1}
+    local message=${2}
 
-    echo "${MESSAGE}" >> ${FILE}
+    echo "${message}" >> ${file}
 }
 
-# File Empty Contents
+# file empty contents
 function file_wipe() {
 
-    # Variables
-    local FILE=${1}
+    # variables
+    local file=${1}
 
-    echo -n > ${FILE}
+    echo -n > ${file}
 
-}
+}source "/home/fortunate/my/system/core/files.zsh"
+source "/home/fortunate/my/system/core/files.zsh"
+source "/home/fortunate/my/system/core/files.zsh"
+source "/home/fortunate/my/system/core/files.zsh"
+source "/home/fortunate/my/system/core/files.zsh"

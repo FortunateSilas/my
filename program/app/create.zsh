@@ -10,10 +10,10 @@ echo "You typed : ${APPNAME}"
 # shell_newline
 
 # cd apps
-Folder Enter ${HOST_A}
+folder enter ${host_a}
 
 # create database
-Database Create ${APPNAME}
+database create ${APPNAME}
 
 # shell_newline
 
@@ -45,7 +45,7 @@ case "${APPFRAMEWORK}" in
         echo "You have selected : WordPress "
         echo "============================= "
         echo "\n"
-        . "${SCRIPTS_WP}/wp_create.zsh"
+        . "${scripts_wp}/create.zsh"
 
     ;;
     * )

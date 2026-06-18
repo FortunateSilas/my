@@ -1,4 +1,4 @@
-function Wordpress() {
+function wordpress() {
 
 	# Selector
     local OPTION=${1}
@@ -11,7 +11,7 @@ function Wordpress() {
 	local DBPASS="DBPASS"
 
 	# Directories
-	local DIR="${HOST_A}/Wordpress"
+	local DIR="${host_a}/wordpress"
 
 	if [ ! ${1} ]; then
 	
@@ -21,7 +21,7 @@ function Wordpress() {
 	else
 		cd $DIR
 
-		. "${ACTIONS}/wordpress.zsh"
+		. "${actions}/wordpress.zsh"
 		
 	fi
 

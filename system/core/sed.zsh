@@ -1,18 +1,22 @@
-# SED Find Replace
+# sed find replace
 function sed_find_replace() {
 
 
-    local Old=${1}
-    local New=${2}
-    local Filename=${3}
+    local old=${1}
+    local new=${2}
+    local filename=${3}
 
-    # SED Find Replace
-    sed -i 's|'${Old}'|'${New}'|g' ${Filename}
+    # sed find replace
+    sed -i 's|'${old}'|'${new}'|g' ${filename}
 }
 
-# SED Add to path
+# sed add to path
 function sed_add_to_path() {
 
-    # SED Find Replace
-    sed -i 's|:$PATH|:'${1}':$PATH|g' ${HOME}/.zshrc
-}
+    # sed find replace
+    sed -i 's|:$path|:'${1}':$path|g' ${HOME}/.zshrc
+}source "/home/fortunate/my/system/core/sed.zsh"
+source "/home/fortunate/my/system/core/sed.zsh"
+source "/home/fortunate/my/system/core/sed.zsh"
+source "/home/fortunate/my/system/core/sed.zsh"
+source "/home/fortunate/my/system/core/sed.zsh"

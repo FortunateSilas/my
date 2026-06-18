@@ -1,35 +1,34 @@
-
 case "${OPTION}" in
-    "Folder" )
+    "folder" )
 
         # done
-        Folder Open ${DIR}
+        folder open ${DIR}
 
     ;;
-    "Browse" )
+    "browse" )
 
-        # Upgrade
+        # upgrade
         valet open
 
     ;;
-    "Update" )
+    "update" )
 
-        # Upgrade
+        # upgrade
         wp core update
 
     ;;
-    "Database" )
+    "database" )
 
         case "${2}" in
 
-            "Export" )
+            "export" )
 
-                Database Export ${3}
+                database export ${3}
 
             ;;
-            "Import" )
+            "import" )
 
-                Database Import ${3}
+                database import ${3}
 
             ;;
             * )
@@ -37,22 +36,22 @@ case "${OPTION}" in
         esac
 
     ;;
-    "Plugin" )
+    "plugin" )
 
-        # Upgrade
-        echo "This will manage single plugins and bundled plugins"
+        # upgrade
+        echo "this will manage single plugins and bundled plugins"
 
     ;;
-    "Info" )
+    "info" )
 
-        # Upgrade
-        echo "This will manage single plugins and bundled plugins"
+        # upgrade
+        echo "this will manage single plugins and bundled plugins"
 
     ;;
     * )
 
-        echo "Your options are : [ 
-        INIT | UPGRADE |  ]"
+        echo "your options are : [ 
+        init | upgrade |  ]"
 
     ;;
 esac

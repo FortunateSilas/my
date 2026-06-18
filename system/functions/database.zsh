@@ -1,26 +1,26 @@
-function Database() {
+function database() {
     
 	# Selector
     local OPTION=${1}
     local DBNAME=${2}
 
     case $OPTION in
-		"Create" )
+		"create" )
 
 			# Comment
 			database_create "$DBNAME"
 
 		;;
-		"Delete" )
+		"delete" )
 
 			# Comment
 			database_delete "$DBNAME"
 
 		;;
-		"Export" )
+		"export" )
 
 			# Export database if it exist in mysql
-			if [ -d "${MYSQL_DATABASES_PATH}/${2}" ]; then
+			if [ -d "${mysql_databases_path}/${2}" ]; then
 
 				wp db export "./${2}.sql"
 
@@ -31,7 +31,7 @@ function Database() {
 			fi
 
 		;;
-		"Import" )
+		"import" )
 
 			wp db import "./${2}.sql"
 
@@ -43,4 +43,8 @@ function Database() {
 
 		;;
 	esac
-}
+}source "/home/fortunate/my/system/functions/database.zsh"
+source "/home/fortunate/my/system/functions/database.zsh"
+source "/home/fortunate/my/system/functions/database.zsh"
+source "/home/fortunate/my/system/functions/database.zsh"
+source "/home/fortunate/my/system/functions/database.zsh"

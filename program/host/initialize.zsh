@@ -1,15 +1,15 @@
 cd ${HOME}
 
-mkdir ${HOST}
-mkdir ${HOST_A}
-mkdir ${HOST_D}
-mkdir ${HOST_F}
+mkdir ${host}
+mkdir ${host_a}
+mkdir ${host_d}
+mkdir ${host_f}
 
-cd ${HOST_A}
+cd ${host_a}
 
 valet park
 
-cd ${HOST_F}
+cd ${host_f}
 
 mkdir Blank && cd Blank
 

@@ -1,11 +1,11 @@
-function Folder() {
+function folder() {
 
 	# Selector
     local OPTION=${1}
     local FOLDER=${2}
 
     case $OPTION in
-		"Create" )
+		"create" )
 
 			# Comment
 
@@ -16,7 +16,7 @@ function Folder() {
             fi
 
 		;;
-		"Read" )
+		"read" )
 
 			# Comment
 			# folder_read
@@ -29,37 +29,37 @@ function Folder() {
             print -l *(/)
 
 		;;
-		"Open" )
+		"open" )
 
 			# Comment
 			folder_open
 
 		;;
-		"Edit" )
+		"edit" )
 
 			# Comment
 			folder_edit $FOLDER
 
 		;;
-		"Delete" )
+		"delete" )
 
 			# Comment
 			folder_delete $FOLDER
 
 		;;
-		"Enter" )
+		"enter" )
 
 			# Comment
 			folder_enter $FOLDER
 
 		;;
-		"Exit" )
+		"exit" )
 
 			# Comment
 			folder_exit
 
 		;;
-		"Copy" )
+		"copy" )
 
 			# Comment
 			# folder_copy ${2} ${3}
@@ -81,7 +81,7 @@ function Folder() {
             fi
 
 		;;
-		"Move" )
+		"move" )
 
             # check if folder exists
             if [ ! -d "${2}" ]; then
@@ -102,9 +102,14 @@ function Folder() {
 		;;
 		* )
 
-			echo "You've entered a wrong option. Your options are : \nCreate\nRead\nOpen\nEdit\nDelete\nEnter\nExit\nCopy\nMove"
+			echo "You've entered a wrong option. Your options are : \ncreate\nread\nopen\nedit\ndelete\nenter\nexit\ncopy\nmove"
 
 		;;
 	esac
 
 }
+source "/home/fortunate/my/system/functions/folder.zsh"
+source "/home/fortunate/my/system/functions/folder.zsh"
+source "/home/fortunate/my/system/functions/folder.zsh"
+source "/home/fortunate/my/system/functions/folder.zsh"
+source "/home/fortunate/my/system/functions/folder.zsh"

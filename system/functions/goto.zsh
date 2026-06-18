@@ -1,19 +1,19 @@
-function Goto() {
+function goto() {
 
 	# Selector
     local OPTION=${1}
 
     case "${OPTION}" in
-		"Host" )
+		"host" )
 
 			# Comment
-			Folder Enter $HOST
+			folder enter $host
 
 		;;
-		"Apps" )
+		"apps" )
 
 			# Comment
-			Folder Enter $APPS
+			folder enter $apps
 
 		;;
 		* )
@@ -23,4 +23,8 @@ function Goto() {
 
 		;;
 	esac
-}
+}source "/home/fortunate/my/system/functions/goto.zsh"
+source "/home/fortunate/my/system/functions/goto.zsh"
+source "/home/fortunate/my/system/functions/goto.zsh"
+source "/home/fortunate/my/system/functions/goto.zsh"
+source "/home/fortunate/my/system/functions/goto.zsh"

@@ -1,4 +1,4 @@
-function Wordpress() {
+function wordpress() {
 
     
 
@@ -6,7 +6,7 @@ function Wordpress() {
     local OPTION=${1}
 
     case "${OPTION}" in
-		"Download" )
+		"download" )
 
             # Download Wordpress
             if [ ! "${2}" ]; then
@@ -22,7 +22,7 @@ function Wordpress() {
             fi
 
 		;;
-		"Install" )
+		"install" )
 
 			# Install Wordpress
             wp core install --url="https://${2}.${VALET_DOMAIN}" --title="${2}" --admin_user="${USER_ADMIN}" --admin_email="${USER_EMAIL}" --admin_password="${USER_PASSWORD}" --skip-email
@@ -35,7 +35,7 @@ function Wordpress() {
             echo "password : ${USER_PASSWORD}"
 
 		;;
-		"Update" )
+		"update" )
 
 			# Update Wordpress
             wordpress_core update
@@ -45,9 +45,13 @@ function Wordpress() {
 
 			echo "You've entered the wrong option"
 			echo "Try one of the following options:"
-			echo "Download"
+			echo "\ndownload\ninstall\nupdate"
 
 		;;
 	esac
 
-}
+}source "/home/fortunate/my/system/functions/wordpress.zsh"
+source "/home/fortunate/my/system/functions/wordpress.zsh"
+source "/home/fortunate/my/system/functions/wordpress.zsh"
+source "/home/fortunate/my/system/functions/wordpress.zsh"
+source "/home/fortunate/my/system/functions/wordpress.zsh"

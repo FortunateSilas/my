@@ -1,4 +1,4 @@
-function File() {
+function file() {
     
 	# Selector
     local OPTION=${1}
@@ -6,37 +6,37 @@ function File() {
     local FILE2=${3}
 
     case $OPTION in
-		"Create" )
+		"create" )
 
 			# Comment
 			file_create "$FILE"
 
 		;;
-		"Rename" )
+		"rename" )
 
 			# Comment
 			file_rename ${FILE} ${FILE2}
 
 		;;
-		"Edit" )
+		"edit" )
 
 			# Comment
 			file_edit $FILE
 
 		;;
-		"Delete" )
+		"delete" )
 
 			# Comment
 			file_delete $FILE
 
 		;;
-		"Read" )
+		"read" )
 
 			# Comment
 			file_read $FILE
 
 		;;
-		"ReadLine" )
+		"read_line" )
 
             local LINE=${3}
 
@@ -44,13 +44,13 @@ function File() {
 			file_read_line $FILE $LINE
 
 		;;
-		"FindReplace" )
+		"find_replace" )
 
 			# Comment
 			sed_find_replace ${2} ${3} ${4}
 
 		;;
-		"Write" )
+		"write" )
 
             local MESSAGE=${3}
 
@@ -58,13 +58,13 @@ function File() {
 			file_write $FILE $MESSAGE
 
 		;;
-		"Wipe" )
+		"wipe" )
 
 			# Comment
 			file_wipe $FILE
 
 		;;
-		"Copy" )
+		"copy" )
 
 			# Comment
 			file_copy $FILE $FILE2
@@ -78,4 +78,8 @@ function File() {
 		;;
 	esac
 
-}
+}source "/home/fortunate/my/system/functions/file.zsh"
+source "/home/fortunate/my/system/functions/file.zsh"
+source "/home/fortunate/my/system/functions/file.zsh"
+source "/home/fortunate/my/system/functions/file.zsh"
+source "/home/fortunate/my/system/functions/file.zsh"

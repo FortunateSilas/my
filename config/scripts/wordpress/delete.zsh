@@ -1,4 +1,4 @@
-cd "${HOST_A}"
+cd "${host_a}"
 echo "Enter your App/Website's name : "
 echo "=============================== "
 read APPNAME_INPUT
@@ -12,16 +12,16 @@ read CONTINUE
 if [[ "${CONTINUE}" == "y" ]]; then
 
     # Delete Database
-    mysql -u "${MYSQL_USERNAME}" --password="${MYSQL_PASSWORD}" -e 'DROP DATABASE '${APPNAME}';'
+    mysql -u "${mysql_username}" --password="${mysql_password}" -e 'DROP DATABASE '${APPNAME}';'
 
     # Delete App's Folder
     rm -rf ${APPNAME}
 
     # Delete Data file
-    rm ${DATA_A}/${APPNAME}.zsh
+    rm ${data_a}/${APPNAME}.zsh
 
     # Delete Nginx Config File
-    rm ${VALET_NGINX}/${APPNAME}.${VALET_DOMAIN}
+    rm ${valet_nginx}/${APPNAME}.${valet_domain}
 
     # Delete SSL Certificate
     valet unsecure ${APPNAME}

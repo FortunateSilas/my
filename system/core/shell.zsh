@@ -73,4 +73,8 @@ function shell_read_yesno() {
             echo "Enter [y] or [n]"
         ;;
     esac
-}
+}source "/home/fortunate/my/system/core/shell.zsh"
+source "/home/fortunate/my/system/core/shell.zsh"
+source "/home/fortunate/my/system/core/shell.zsh"
+source "/home/fortunate/my/system/core/shell.zsh"
+source "/home/fortunate/my/system/core/shell.zsh"

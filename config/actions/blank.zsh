@@ -1,21 +1,20 @@
-
 case "${OPTION}" in
-    "Folder" )
+    "folder" )
 
         # done
-        Folder Open ${DIR}
+        folder open ${DIR}
 
     ;;
-    "Browse" )
+    "browse" )
 
-        # Upgrade
+        # upgrade
         valet open
 
     ;;
     * )
 
-        echo "Your options are : [ 
-        INIT | UPGRADE |  ]"
+        echo "your options are : [ 
+        init | upgrade |  ]"
 
     ;;
 esac

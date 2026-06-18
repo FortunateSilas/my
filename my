@@ -5,28 +5,27 @@ function my() {
 
     if [ ! -d "${HOME}/Host" ]; then
 
-        folder_create "${data_a}"
+        folder create "${data_a}"
                 
         # Call Wordpress Create Script
         . "${program_h}/initialize.zsh"
 
     else
 
-        local APPS="${HOME}/Host/Apps"
-
-        cd ${APPS}
+        cd ${host_a}
+        echo "Welcome to your Host."
 
         case "${1}" in
-            "Create" )
+            "create" )
                 
                 # Call Wordpress Create Script
-                . "${SCRIPTS_WP}/create.zsh"
+                . "${scripts_wp}/create.zsh"
 
             ;;
-            "Delete" )
+            "delete" )
                 
                 # Call Wordpress Delete Script
-                . "${SCRIPTS_WP}/delete.zsh"
+                . "${scripts_wp}/delete.zsh"
 
             ;;
             * )
