@@ -24,8 +24,4 @@ function wordpress_database() {
 
     # Performs basic database operations using credentials stored in wp-config.php.
     wp db
-}source "/home/fortunate/my/system/core/wordpress.zsh"
-source "/home/fortunate/my/system/core/wordpress.zsh"
-source "/home/fortunate/my/system/core/wordpress.zsh"
-source "/home/fortunate/my/system/core/wordpress.zsh"
-source "/home/fortunate/my/system/core/wordpress.zsh"
+}

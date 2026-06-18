@@ -78,8 +78,4 @@ function file() {
 		;;
 	esac
 
-}source "/home/fortunate/my/system/functions/file.zsh"
-source "/home/fortunate/my/system/functions/file.zsh"
-source "/home/fortunate/my/system/functions/file.zsh"
-source "/home/fortunate/my/system/functions/file.zsh"
-source "/home/fortunate/my/system/functions/file.zsh"
+}

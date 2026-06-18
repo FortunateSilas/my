@@ -113,42 +113,46 @@ wp_user_password="aaa"
 # NodeJs
 
 
-
 ##########################################
 
 # COMPILE
 
 function COMPILESCRIPTS() {
-
-
-    # Specify the directory containing the .zsh files
     local dir="${1}"
+    local output_file="${settings}/${2}.zsh"
 
-    # Specify the output file
-    local file="${settings}/${2}.zsh"
+    # Validate inputs
+    if [[ -z "$dir" || -z "$2" ]]; then
+        print "Error: COMPILESCRIPTS requires directory and output filename arguments" >&2
+        return 1
+    fi
 
-    # Reset CORE.zsh
-    echo -n > ${file}
+    if [[ ! -d "$dir" ]]; then
+        print "Error: Directory '$dir' does not exist" >&2
+        return 1
+    fi
 
-    sleep 1
+    # Initialize output file
+    print -n > "$output_file"
 
-    if [ -n "$(ls -A ${dir})" ]; then
+    # Use nullglob to handle empty directories gracefully
+    setopt nullglob
+    local -a files=("$dir"/*.zsh)
 
-        # Loop through each .zsh file in the DIR
-        for file in "$dir"/*; do
-            # Check if the file exists and is readable
-            if [ -r "$file" ]; then
-                # Append the source command to the output file
-                echo "source \"$file\"" >> "$file"
+    if (( $#files )); then
+        for source_file in "${files[@]}"; do
+            if [[ -f "$source_file" && -r "$source_file" ]]; then
+                print "source ${source_file}" >> "$output_file"
             fi
         done
     fi
+    unsetopt nullglob
 }
 
-COMPILESCRIPTS ${system_c} "scripts_core"
-COMPILESCRIPTS ${system_f} "scripts_functions"
-COMPILESCRIPTS ${data_a} "scripts_apps"
+COMPILESCRIPTS "${system_c}" "scripts_core"
+COMPILESCRIPTS "${system_f}" "scripts_functions"
+COMPILESCRIPTS "${data_a}" "scripts_apps"
 
-. ${settings}/scripts_core.zsh
-. ${settings}/scripts_functions.zsh
-. ${settings}/scripts_apps.zsh
+. "${settings}/scripts_core.zsh"
+. "${settings}/scripts_functions.zsh"
+. "${settings}/scripts_apps.zsh"

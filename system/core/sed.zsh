@@ -15,8 +15,4 @@ function sed_add_to_path() {
 
     # sed find replace
     sed -i 's|:$path|:'${1}':$path|g' ${HOME}/.zshrc
-}source "/home/fortunate/my/system/core/sed.zsh"
-source "/home/fortunate/my/system/core/sed.zsh"
-source "/home/fortunate/my/system/core/sed.zsh"
-source "/home/fortunate/my/system/core/sed.zsh"
-source "/home/fortunate/my/system/core/sed.zsh"
+}

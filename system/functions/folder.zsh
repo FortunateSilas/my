@@ -108,8 +108,3 @@ function folder() {
 	esac
 
 }
-source "/home/fortunate/my/system/functions/folder.zsh"
-source "/home/fortunate/my/system/functions/folder.zsh"
-source "/home/fortunate/my/system/functions/folder.zsh"
-source "/home/fortunate/my/system/functions/folder.zsh"
-source "/home/fortunate/my/system/functions/folder.zsh"

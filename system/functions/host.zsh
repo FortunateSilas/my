@@ -68,8 +68,4 @@ function host() {
 		esac
 	fi
 
-}source "/home/fortunate/my/system/functions/host.zsh"
-source "/home/fortunate/my/system/functions/host.zsh"
-source "/home/fortunate/my/system/functions/host.zsh"
-source "/home/fortunate/my/system/functions/host.zsh"
-source "/home/fortunate/my/system/functions/host.zsh"
+}

@@ -23,8 +23,4 @@ from information_schema.columns
 where table_schema = '${db}' and data_type in ('char', 'varchar', 'tinytext', 'text', 'mediumtext', 'longtext');
 " | tail -n +2)
 eof
-}source "/home/fortunate/my/system/core/mysql.zsh"
-source "/home/fortunate/my/system/core/mysql.zsh"
-source "/home/fortunate/my/system/core/mysql.zsh"
-source "/home/fortunate/my/system/core/mysql.zsh"
-source "/home/fortunate/my/system/core/mysql.zsh"
+}

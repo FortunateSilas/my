@@ -23,8 +23,4 @@ function goto() {
 
 		;;
 	esac
-}source "/home/fortunate/my/system/functions/goto.zsh"
-source "/home/fortunate/my/system/functions/goto.zsh"
-source "/home/fortunate/my/system/functions/goto.zsh"
-source "/home/fortunate/my/system/functions/goto.zsh"
-source "/home/fortunate/my/system/functions/goto.zsh"
+}

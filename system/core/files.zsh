@@ -103,8 +103,4 @@ function file_wipe() {
 
     echo -n > ${file}
 
-}source "/home/fortunate/my/system/core/files.zsh"
-source "/home/fortunate/my/system/core/files.zsh"
-source "/home/fortunate/my/system/core/files.zsh"
-source "/home/fortunate/my/system/core/files.zsh"
-source "/home/fortunate/my/system/core/files.zsh"
+}

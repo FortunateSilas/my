@@ -50,8 +50,4 @@ function wordpress() {
 		;;
 	esac
 
-}source "/home/fortunate/my/system/functions/wordpress.zsh"
-source "/home/fortunate/my/system/functions/wordpress.zsh"
-source "/home/fortunate/my/system/functions/wordpress.zsh"
-source "/home/fortunate/my/system/functions/wordpress.zsh"
-source "/home/fortunate/my/system/functions/wordpress.zsh"
+}

@@ -43,8 +43,5 @@ function database() {
 
 		;;
 	esac
-}source "/home/fortunate/my/system/functions/database.zsh"
-source "/home/fortunate/my/system/functions/database.zsh"
-source "/home/fortunate/my/system/functions/database.zsh"
-source "/home/fortunate/my/system/functions/database.zsh"
-source "/home/fortunate/my/system/functions/database.zsh"
+}
+
