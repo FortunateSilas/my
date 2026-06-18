@@ -1,14 +1,14 @@
 # Source Config
-. "${HOME}/my/__/CONFIG"
+. "${HOME}/my/config/config.zsh"
 
 function my() {
 
     if [ ! -d "${HOME}/Host" ]; then
 
-        folder_create "${DATA_A}"
+        folder_create "${data_a}"
                 
         # Call Wordpress Create Script
-        . "${PROGRAM_H}/host__initialize.zsh"
+        . "${program_h}/initialize.zsh"
 
     else
 
@@ -20,13 +20,13 @@ function my() {
             "Create" )
                 
                 # Call Wordpress Create Script
-                . "${SCRIPTS_AF}/wordpress__create.zsh"
+                . "${SCRIPTS_WP}/create.zsh"
 
             ;;
             "Delete" )
                 
                 # Call Wordpress Delete Script
-                . "${SCRIPTS_AF}/wordpress__delete.zsh"
+                . "${SCRIPTS_WP}/delete.zsh"
 
             ;;
             * )
