@@ -4,6 +4,8 @@
 function my() {
 
     if [ ! -d "${HOME}/Host" ]; then
+
+        folder_create "${DATA_A}"
                 
         # Call Wordpress Create Script
         . "${PROGRAM_H}/host__initialize.zsh"

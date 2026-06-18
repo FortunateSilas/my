@@ -37,8 +37,12 @@ function folder_edit() {
 # File Open
 function folder_open() {
 
+    if [[ -d "${1}" ]]; then
+        xdg-open "${1}"
+    else
+        xdg-open .
+    fi
     # Edit File
-    xdg-open .
 }
 
 # Folder Delete

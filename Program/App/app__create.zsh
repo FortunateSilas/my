@@ -45,7 +45,7 @@ case "${APPFRAMEWORK}" in
         echo "You have selected : WordPress "
         echo "============================= "
         echo "\n"
-        . "${SCRIPTS_AF}/wordpress_create.zsh"
+        . "${SCRIPTS_WP}/wp_create.zsh"
 
     ;;
     * )
@@ -53,6 +53,7 @@ case "${APPFRAMEWORK}" in
         echo "======================================= "
         echo "1. Blank"
         echo "2. Wordpress"
+        echo "3. NodeJs"
     ;;
 esac
 

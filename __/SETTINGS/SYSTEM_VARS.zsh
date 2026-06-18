@@ -3,11 +3,11 @@
 #############################################################
 
 # valet
-local VALET_DOMAIN = "www"
+VALET_DOMAIN= "www"
 
 #mysql
-local MYSQL_USERNAME = "root"
-local MYSQL_PASSWORD = ""
+MYSQL_USERNAME= "root"
+MYSQL_PASSWORD= ""
 
 # Packages
 

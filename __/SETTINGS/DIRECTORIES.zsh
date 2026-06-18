@@ -2,7 +2,7 @@
 local THISAPP=""
 
 # Core
-local CORE="${HOME}my/Core"
+local CORE="${HOME}/my/Core"
 
 # App
 local APP="${HOME}/my/App"
@@ -11,14 +11,14 @@ local APP="${HOME}/my/App"
 local DATA="${HOME}/my/__/Data"
 local DATA_A="${HOME}/my/__/Data/Apps"
 local DATA_H="${HOME}/my/__/Data/Host"
-local DATA_T="${HOME}/my/__/Data/Templates"
-local DATA_T="${HOME}/my/__/Data/Tools"
+local DATA_TEMPLATES="${HOME}/my/__/Data/Templates"
+local DATA_TOOLS="${HOME}/my/__/Data/Tools"
 
 # Scripts
 local SCRIPTS="${HOME}/my/__/SCRIPTS"
 local SCRIPTS_WP="${HOME}/my/__/SCRIPTS/Wordpress"
 local SCRIPTS_BL="${HOME}/my/__/SCRIPTS/Blank"
-local SCRIPTS_NJ="${HOME}/my/__/SCRIPTS/Blank"
+local SCRIPTS_NJ="${HOME}/my/__/SCRIPTS/NodeJs"
 
 
 # Host Architecture
