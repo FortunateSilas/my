@@ -1,17 +1,17 @@
-function wordpress() {
+function test02() {
 
 	# Selector
     local OPTION=${1}
 	
 	# Config
-	local APPNAME="APPNAME"
-	local FRAMEWORK="FRAMEWORK"
-	local DBNAME="DBNAME"
-	local DBUSER="DBUSER"
-	local DBPASS="DBPASS"
+	local APPNAME='test02'
+	local FRAMEWORK="wordpress"
+	local DBNAME='test02'
+	local DBHOST="DBUSER"
+	local DBPASS=""
 
 	# Directories
-	local DIR="${host_a}/wordpress"
+	local DIR=/home/fortunate/Host/Apps/test02
 
 	if [ ! ${1} ]; then
 	

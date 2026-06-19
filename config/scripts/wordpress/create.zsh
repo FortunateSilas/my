@@ -38,23 +38,23 @@ else
     # Trust Certificate
     # sudo trust anchor --store ${VALET_CERTIFICATES}/${APPNAME}.${VALET_DOMAIN}.crt
 
-    cp ${data_t}/Wordpress.zsh ${data_a}/${APPNAME}.zsh
+    cp ${data_templates}/wordpress.zsh ${data_a}/${APPNAME}.zsh
 
     echo "Updating Data file : "
     echo "==================== "
 
-    sed_find_replace 'function Wordpress() {' "function ${APPNAME}() {" "${data_a}/${APPNAME}.zsh"
+    sed_find_replace 'function wordpress() {' "function ${APPNAME}() {" "${data_a}/${APPNAME}.zsh"
     sed_find_replace 'APPNAME="APPNAME"' "APPNAME='${APPNAME}'" "${data_a}/${APPNAME}.zsh"
 
-    sed_find_replace 'FRAMEWORK="FRAMEWORK"' 'FRAMEWORK="Wordpress"' "${data_a}/${APPNAME}.zsh"
+    sed_find_replace 'FRAMEWORK="FRAMEWORK"' 'FRAMEWORK="wordpress"' "${data_a}/${APPNAME}.zsh"
 
     sed_find_replace 'DBNAME="DBNAME"' "DBNAME='${APPNAME}'" "${data_a}/${APPNAME}.zsh"
 
-    sed_find_replace 'DBUSER="DBUSER"' 'DBHOST="root"' "${data_a}/${APPNAME}.zsh"
+    sed_find_replace 'DBUSER="DBUSER"' 'DBUSER="root"' "${data_a}/${APPNAME}.zsh"
 
-    sed_find_replace 'DBPASS="DBPASS"' 'DBPASS=""' "${data_a}/${APPNAME}.zsh"
+    sed_find_replace 'DBPASS="DBPASS"' 'DBPASS="root"' "${data_a}/${APPNAME}.zsh"
 
-    sed_find_replace 'local DIR="${host_a}/Wordpress"' "local DIR="${host_a}/${APPNAME}"" "${data_a}/${APPNAME}.zsh"
+    sed_find_replace 'local DIR="${host_a}/wordpress"' "local DIR="${host_a}/${APPNAME}"" "${data_a}/${APPNAME}.zsh"
 
     source ~/.zshrc
 

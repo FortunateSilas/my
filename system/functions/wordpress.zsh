@@ -25,14 +25,14 @@ function wordpress() {
 		"install" )
 
 			# Install Wordpress
-            wp core install --url="https://${2}.${VALET_DOMAIN}" --title="${2}" --admin_user="${USER_ADMIN}" --admin_email="${USER_EMAIL}" --admin_password="${USER_PASSWORD}" --skip-email
+            wp core install --url="https://${2}.${valet_domain}" --title="${2}" --admin_user="${user_admin}" --admin_email="${user_email}" --admin_password="${user_password}" --skip-email
 
             shell_newline
 
-            echo "Username & Password : "
+            echo "username & password : "
             echo "===================== "
-            echo "username : ${USER_ADMIN}"
-            echo "password : ${USER_PASSWORD}"
+            echo "username : ${user_admin}"
+            echo "password : ${user_password}"
 
 		;;
 		"update" )

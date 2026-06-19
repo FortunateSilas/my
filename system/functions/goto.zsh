@@ -13,7 +13,7 @@ function goto() {
 		"apps" )
 
 			# Comment
-			folder enter $apps
+			folder enter $host_a
 
 		;;
 		* )

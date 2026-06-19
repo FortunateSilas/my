@@ -17,7 +17,7 @@ function host() {
 			# Host Initialize
 
 				# Comment
-				. "${program_h}/initializ.zsh"
+				. "${program_h}/initialize.zsh"
 
 			;;
 			"refresh" )

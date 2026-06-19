@@ -69,8 +69,10 @@ valet_nginx="${valet_path}/Nginx"
 mysql_username="root"
 mysql_password="root"
 
+mysql_databases_path="${HOME}/var/lib/mariadb/"
+
 #php
-php_config_path="/etc/php/8.4/fpm"
+php_config_path="/etc/php/8.5/fpm"
 php_ini="${php_config_path}/php.ini"
 
 # nginx /etc/nginx
