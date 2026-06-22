@@ -11,8 +11,12 @@ read CONTINUE
 
 if [[ "${CONTINUE}" == "y" ]]; then
 
+    cd "${host_a}/${APPNAME}"
+
     # Delete Database
-    mysql -u "${mysql_username}" --password="${mysql_password}" -e 'DROP DATABASE '${APPNAME}';'
+    wp db drop
+
+    cd "${host_a}"
 
     # Delete App's Folder
     rm -rf ${APPNAME}

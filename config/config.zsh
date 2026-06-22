@@ -59,7 +59,7 @@ host_t="${host_d}/Tools"
 #############################################################
 
 # valet
-valet_domain="www"
+valet_domain="test"
 valet_path="${HOME}/.config/valet"
 valet_logs="${valet_path}/Log"
 valet_certificates="${valet_path}/Certificates"
@@ -80,7 +80,6 @@ nginx_config_path="/etc/nginx"
 nginx_config="${nginx_config_path}/nginx.conf"
 nginx_sites_available="${nginx_config_path}/sites-available"
 nginx_sites_enabled="${nginx_config_path}/sites-enabled"
-
 
 # Packages
 
@@ -103,11 +102,11 @@ nginx_sites_enabled="${nginx_config_path}/sites-enabled"
 # user information
 
 # General
-user_email="fortunatesilas.art@gmail.com"
+user_email="my.sample@email.com"
 
 # WordPress
 wp_user_name="Fortunate"
-wp_user_password="aaa"
+wp_user_password="123"
 
 # Blank
 

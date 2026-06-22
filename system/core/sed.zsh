@@ -7,7 +7,7 @@ function sed_find_replace() {
     local filename=${3}
 
     # sed find replace
-    sed -i 's|'${old}'|'${new}'|g' ${filename}
+    sudo sed -i 's|'${old}'|'${new}'|g' ${filename}
 }
 
 # sed add to path
